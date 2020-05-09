@@ -2,17 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_margin="15dp"
     android:layout_height="match_parent"
+    android:layout_margin="15dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/text_escolha_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="Escolha do App: "
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="Escolha do App:           Sua escolha:"
         android:textSize="20sp" />
 
     <ImageView
@@ -20,8 +20,18 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@+id/text_escolha_app"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/padrao" />
+
+    <ImageView
+        android:id="@+id/img_escolha_app2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/text_escolha_app"
+        android:layout_toRightOf="@id/img_escolha_app"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="19dp"
         android:src="@drawable/padrao" />
 
     <TextView
@@ -60,10 +70,31 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@+id/text_sua_escolha"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:layout_toRightOf="@id/img_papel"
-        android:layout_marginLeft="10dp"
         android:onClick="selecionarTesoura"
         android:src="@drawable/tesoura" />
+
+    <ImageView
+        android:id="@+id/img_spock"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/img_pedra"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/img_lagarto"
+        android:onClick="selecionarSpock"
+        android:src="@drawable/spock" />
+
+    <ImageView
+        android:id="@+id/img_lagarto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/img_papel"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:onClick="selecionarLagarto"
+        android:src="@drawable/lagarto" />
 
 </RelativeLayout>
