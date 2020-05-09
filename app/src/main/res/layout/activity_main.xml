@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_margin="15dp"
@@ -23,7 +22,7 @@
         android:layout_below="@+id/text_escolha_app"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        tools:srcCompat="@drawable/padrao" />
+        android:src="@drawable/padrao" />
 
     <TextView
         android:id="@+id/text_sua_escolha"
@@ -43,7 +42,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
         android:layout_toLeftOf="@id/img_papel"
-        tools:srcCompat="@drawable/pedra" />
+        android:onClick="selecionarPedra"
+        android:src="@drawable/pedra" />
 
     <ImageView
         android:id="@+id/img_papel"
@@ -52,7 +52,8 @@
         android:layout_below="@+id/text_sua_escolha"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        tools:srcCompat="@drawable/papel" />
+        android:onClick="selecionarPapel"
+        android:src="@drawable/papel" />
 
     <ImageView
         android:id="@+id/img_tesoura"
@@ -62,6 +63,7 @@
         android:layout_marginTop="20dp"
         android:layout_toRightOf="@id/img_papel"
         android:layout_marginLeft="10dp"
-        tools:srcCompat="@drawable/tesoura" />
+        android:onClick="selecionarTesoura"
+        android:src="@drawable/tesoura" />
 
 </RelativeLayout>
